@@ -133,3 +133,18 @@ VALUES
 
 
 
+ git remote set-url origin https://github.com/Die-tech-web/appdaf_php.git
+ 
+ 
+git checkout -b main
+git add .
+git commit -m "Initial commit for AppDAF_php"
+git push -u origin main
+
+
+
+
+gitignore 
+git rm -rf --cached vendor/
+git rm --cached .env
+git commit -m "creation du fichier .gitignore"
