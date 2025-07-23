@@ -31,10 +31,10 @@ RUN composer install --no-dev --optimize-autoloader || true
 RUN rm /etc/nginx/sites-enabled/default
 
 # Copier ta configuration nginx et supervisord
-COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
+COPY ./default.conf /etc/nginx/conf.d/default.conf
 COPY supervisord.conf /etc/supervisord.conf
 
 # Exposer le port
-EXPOSE 81
+EXPOSE 80
 
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
