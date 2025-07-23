@@ -1,0 +1,135 @@
+PGPORT=5433
+ docker compose down -v
+ docker compose up -d
+
+ sudo lsof -i :5432
+
+
+
+
+
+
+ faite  une dependance du dossier core, et la dependance du projet
+OPEN CLOSE AND PRINCIPALE-> une classe A se relie a une classe b, on  peut cree une dependance entre les deux classe.
+une interface cest un contrat et ne contient que des methodes abstractes, pas besion de mettre abstractes devant les methodes;
+A chaque fois qu'on cree un service on lui cree un interface
+i de solide- segrattion des interfaces= ON CREE UNE interface qui contient les methodes qu'ils ont en commun, et on l'implemente dans les services
+ET CHAQUE REPOSIORY A UNE INTERFACE,
+
+le D cest ce quon a fait avec App qui charge yamal
+pour faire le dependance injection: on utilise facade et c"est la classe App
+il ya aussi injection de dependance par constructeur (on lui passe la paramettre) ,au moment ou on cree la classe on lui injecte une dependance  ,
+dependance repository->database
+dependance service->repository (plus complexe on utilise la reflexion pour savoir les argumment dans le constructeur)
+dependance controller->service
+
+
+premier régle plus de new dans le projet on remplace tout par la reflection: 
+on cree une classe singleton,
+
+PGADMIN_DEFAULT_EMAIL=die@gmail.com
+PGADMIN_DEFAULT_PASSWORD=madie
+
+POSTGRES_DB=appdaf
+DB_USER=postgres
+DB_PASSWORD=madie
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=madie
+
+
+
+APP_URL=http://localhost
+
+UID=1000
+GID=1000
+
+PGADMIN_DEFAULT_EMAIL=die@gmail.com
+PGADMIN_DEFAULT_PASSWORD=madie
+
+PGPORT=5433
+DB_HOST=db
+DB_PORT=5433
+DB_DRIVE=pgsql
+DB_USER=postgres
+DB_PASSWORD=madie
+DB_NAME=appdaf
+METHODE_INSTANCE_NAME=getInstance
+DSN=pgsql:host=localhost;port=5433;dbname=appdaf
+
+
+'name' dlpi1rk7t
+'apikey' 495958188753425
+api_secret' aanMG6mNfrYqTpwVK3Ph47ewImE
+
+CLOUDINARY_CLOUD_NAME=dlpi1rk7t
+CLOUDINARY_API_KEY=495958188753425
+CLOUDINARY_API_SECRET=aanMG6mNfrYqTpwVK3Ph47ewImE
+
+$cloud = require __DIR__ . '/../app/config/cloudinary.php';
+
+
+
+
+
+
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use Dotenv\Dotenv;
+
+$dotenv = Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv->load();
+
+
+$driver = $_ENV['DB_DRIVER'] ?? 'pgsql'; 
+$host = $_ENV['DB_HOST'] ?? '127.0.0.1';
+$port = $_ENV['DB_PORT'] ?? ($driver === 'pgsql' ? '5433' : '3306');
+$dbname = $_ENV['DB_NAME'] ?? 'appdaf'; 
+$user = $_ENV['DB_USERNAME'] ?? 'postgres';
+$password = $_ENV['DB_PASSWORD'] ?? 'madie';
+
+$dsn = "$driver:host=$host;port=$port;dbname=$dbname";
+
+
+
+
+
+
+APP_URL=http://localhost
+
+DB_DRIVER=pgsql
+PGADMIN_DEFAULT_EMAIL=die@gmail.com
+PGADMIN_DEFAULT_PASSWORD=madie
+
+POSTGRES_DB=appdaf
+DB_HOST=localhost
+DB_PORT=5433
+DB_USER=postgres
+DB_PASSWORD=madie
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=madie
+DSN=pgsql:host=localhost;port=5433;dbname=appdaf
+
+
+
+
+
+
+
+
+
+
+
+
+INSERT INTO citoyen (nom, prenom, date_naissance, lieu_naissance, cni, cni_recto_url, cni_verso_url)
+VALUES 
+('Diop', 'Mamadou', '1990-05-12', 'Dakar', 'CNI1234567890', 
+ 'https://res.cloudinary.com/demo/image/upload/v1623456789/cni_recto_url.png', 
+ 'https://res.cloudinary.com/demo/image/upload/v1623456789/cni_verso_url.png'),
+
+('Ba', 'Cheikh', '1993-02-01', 'Saint-Louis', 'CNI4567891230',
+ 'https://res.cloudinary.com/demo/image/upload/v1623456789/cni_recto_url.png',
+ 'https://res.cloudinary.com/demo/image/upload/v1623456789/cni_verso_url.png');
+
+
+
