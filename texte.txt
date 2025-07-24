@@ -37,6 +37,25 @@ POSTGRES_USER=postgres
 POSTGRES_PASSWORD=madie
 
 
+APP_URL=http://localhost
+
+UID=1000
+GID=1000
+
+PGADMIN_DEFAULT_EMAIL=die@gmail.com
+PGADMIN_DEFAULT_PASSWORD=madie
+
+PGPORT=5433
+DB_HOST=db
+DB_PORT=5433
+DB_DRIVE=pgsql
+DB_USER=postgres
+DB_PASSWORD=madie
+DB_NAME=appdaf
+METHODE_INSTANCE_NAME=getInstance
+DSN=pgsql:host=localhost;port=5433;dbname=appdaf
+
+
 
 APP_URL=http://localhost
 
@@ -148,3 +167,11 @@ gitignore
 git rm -rf --cached vendor/
 git rm --cached .env
 git commit -m "creation du fichier .gitignore"
+
+APP_URL=http://localhost
+
+UID=1000
+GID=1000
+
+PGADMIN_DEFAULT_EMAIL=die@gmail.com
+PGADMIN_DEFAULT_PASSWORD=madie

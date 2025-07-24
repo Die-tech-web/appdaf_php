@@ -306,3 +306,7 @@
 2025-07-23 13:05:16,338 INFO spawned: 'nginx' with pid 13
 2025-07-23 13:05:16,348 WARN exited: nginx (exit status 1; not expected)
 2025-07-23 13:05:17,350 INFO gave up: nginx entered FATAL state, too many start retries too quickly
+2025-07-24 10:20:01,652 INFO reaped unknown pid 32 (exit status 0)
+2025-07-24 10:30:16,361 WARN received SIGQUIT indicating exit request
+2025-07-24 10:30:16,370 INFO waiting for php-fpm to die
+2025-07-24 10:30:16,407 INFO stopped: php-fpm (exit status 0)
